@@ -52,6 +52,8 @@ for my $type ( AbsPath, AbsFile, AbsDir ) {
 
 =for Pod::Coverage method_names_here
 
+=for stopwords coercions
+
 =head1 SYNOPSIS
 
   ### specification of type constraint with coercion
@@ -91,7 +93,11 @@ It also can check to ensure that files or directories exist.
 
 =head1 SUBTYPES
 
+=for stopwords SUBTYPES subtype subtypes
+
 This module uses L<MooseX::Types> to define the following subtypes.
+
+=for stopwords AbsPath AbsFile AbsDir
 
 =head2 Path
 

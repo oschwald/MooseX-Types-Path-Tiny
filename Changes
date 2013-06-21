@@ -1,6 +1,7 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+    - re-release with my plugin bundle, fixing associated metadata.
 
 0.005     2013-06-21 13:11:26 America/Vancouver
     - split apart MooseX::Types::Path::Tiny and Types::Path::Tiny into their
