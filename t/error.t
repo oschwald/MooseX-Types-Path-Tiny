@@ -1,10 +1,8 @@
+use 5.010;
 use strict;
 use warnings;
 use Test::More 0.96;
-use Test::Requires { "Test::Fatal" => 0 };
-use Test::Requires { "Moose" => 2.0000 };
 use Test::Fatal;
-
 use Path::Tiny;
 
 {
@@ -31,8 +29,7 @@ use Path::Tiny;
 
 my $err_re = qr/does not exist/;
 
-like( exception { Foo->new( a_path => {} ) },
-    qr{not isa Path::Tiny}, "Error on Path for {}" );
+ok( exception { Foo->new( a_path => {} ) }, "Error on Path for {}" );
 
 like( exception { Foo->new( a_file => "aalkdjalkdfs" ) },
     $err_re, "Error on File for nonexistent" );
@@ -40,8 +37,7 @@ like( exception { Foo->new( a_file => "aalkdjalkdfs" ) },
 like( exception { Foo->new( a_dir => "aalkdjalkdfs" ) },
     $err_re, "Error on Dir for nonexistent" );
 
-like( exception { AbsFoo->new( a_path => {} ) },
-    qr{not isa Path::Tiny}, "Error on Path for {}" );
+ok( exception { AbsFoo->new( a_path => {} ) }, "Error on Path for {}" );
 
 like( exception { AbsFoo->new( a_file => "aalkdjalkdfs" ) },
     $err_re, "Error on File for nonexistent" );

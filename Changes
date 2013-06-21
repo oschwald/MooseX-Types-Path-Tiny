@@ -1,6 +1,11 @@
-Revision history for MooseX-Types-Path-Tiny
+Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+    - split apart MooseX::Types::Path::Tiny and Types::Path::Tiny into their
+      own distributions. This dist has reverted back to
+      MooseX-Types-Path-Tiny as of version 0.002, and to using MooseX::Types
+      -- the Type::Tiny version is available in the separate Types-Path-Tiny
+      distribution.
 
 0.004     2013-06-21 13:05:55 America/New_York
 

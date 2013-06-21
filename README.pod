@@ -4,11 +4,11 @@
 
 =head1 NAME
 
-Types::Path::Tiny - Path::Tiny types and coercions for Moose and Moo
+MooseX::Types::Path::Tiny - Path::Tiny types and coercions for Moose
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -17,7 +17,7 @@ version 0.004
   package Foo;
 
   use Moose;
-  use Types::Path::Tiny qw/Path AbsPath/;
+  use MooseX::Types::Path::Tiny qw/Path AbsPath/;
 
   has filename => (
     is => 'ro',
@@ -38,9 +38,8 @@ version 0.004
 
 =head1 DESCRIPTION
 
-This module provides L<Path::Tiny> types for Moose, Moo, etc.
-
-It handles two important types of coercion:
+This module provides L<Path::Tiny> types for Moose.  It handles
+two important types of coercion:
 
 =over 4
 
@@ -60,7 +59,7 @@ It also can check to ensure that files or directories exist.
 
 =head1 SUBTYPES
 
-This module uses L<Type::Tiny> to define the following subtypes.
+This module uses L<MooseX::Types> to define the following subtypes.
 
 =head2 Path
 
@@ -124,7 +123,7 @@ L<Moose::Manual::Types>
 =head2 Bugs / Feature Requests
 
 Please report any bugs or feature requests through the issue tracker
-at L<https://github.com/dagolden/types-path-tiny/issues>.
+at L<https://github.com/dagolden/moosex-types-path-tiny/issues>.
 You will be notified automatically of any progress on your issue.
 
 =head2 Source Code
@@ -132,17 +131,27 @@ You will be notified automatically of any progress on your issue.
 This is open source software.  The code repository is available for
 public review and contribution under the terms of the license.
 
-L<https://github.com/dagolden/types-path-tiny>
+L<https://github.com/dagolden/moosex-types-path-tiny>
 
-  git clone git://github.com/dagolden/types-path-tiny.git
+  git clone git://github.com/dagolden/moosex-types-path-tiny.git
 
 =head1 AUTHOR
 
 David Golden <dagolden@cpan.org>
 
-=head1 CONTRIBUTOR
+=head1 CONTRIBUTORS
 
-Toby Inkster <tobyink@cpan.org>
+=over 4
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Toby Inkster <mail@tobyinkster.co.uk>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

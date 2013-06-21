@@ -1,10 +1,10 @@
 {
-   "abstract" : "Path::Tiny types and coercions for Moose and Moo",
+   "abstract" : "Path::Tiny types and coercions for Moose",
    "author" : [
       "David Golden <dagolden@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "apache_2_0"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Types-Path-Tiny",
+   "name" : "MooseX-Types-Path-Tiny",
    "no_index" : {
       "directory" : [
          "t",
@@ -40,12 +40,12 @@
       },
       "runtime" : {
          "requires" : {
+            "Moose" : "2",
+            "MooseX::Types" : "0",
+            "MooseX::Types::Moose" : "0",
+            "MooseX::Types::Stringlike" : "0",
             "Path::Tiny" : "0",
-            "Type::Library" : "0.008",
-            "Type::Utils" : "0",
-            "Types::Standard" : "0",
-            "Types::TypeTiny" : "0.004",
-            "perl" : "5.008001",
+            "perl" : "5.010",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -58,38 +58,33 @@
             "File::Temp" : "0.18",
             "File::pushd" : "0",
             "List::Util" : "0",
-            "Moose" : "0",
             "Test::Fatal" : "0",
-            "Test::More" : "0.96",
-            "Test::Requires" : "0"
+            "Test::More" : "0.96"
          }
       }
    },
    "provides" : {
       "MooseX::Types::Path::Tiny" : {
          "file" : "lib/MooseX/Types/Path/Tiny.pm",
-         "version" : "0.004"
-      },
-      "Types::Path::Tiny" : {
-         "file" : "lib/Types/Path/Tiny.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/dagolden/types-path-tiny/issues"
+         "web" : "https://github.com/dagolden/moosex-types-path-tiny/issues"
       },
-      "homepage" : "https://metacpan.org/release/Types-Path-Tiny",
+      "homepage" : "https://metacpan.org/release/MooseX-Types-Path-Tiny",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/dagolden/types-path-tiny.git",
-         "web" : "https://github.com/dagolden/types-path-tiny"
+         "url" : "git://github.com/dagolden/moosex-types-path-tiny.git",
+         "web" : "https://github.com/dagolden/moosex-types-path-tiny"
       }
    },
-   "version" : "0.004",
+   "version" : "0.005",
    "x_contributors" : [
-      "Toby Inkster <tobyink@cpan.org>"
+      "Karen Etheridge <ether@cpan.org>",
+      "Toby Inkster <mail@tobyinkster.co.uk>"
    ]
 }
 
