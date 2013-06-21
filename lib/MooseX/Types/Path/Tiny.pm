@@ -139,6 +139,7 @@ constructors, which hold the reference for you.
 =for :list
 * L<Path::Tiny>
 * L<Moose::Manual::Types>
+* L<Types::Path::Tiny>
 
 =cut
 
