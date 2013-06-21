@@ -1,6 +1,8 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+
+0.005     2013-06-21 13:11:26 America/Vancouver
     - split apart MooseX::Types::Path::Tiny and Types::Path::Tiny into their
       own distributions. This dist has reverted back to
       MooseX-Types-Path-Tiny as of version 0.002, and to using MooseX::Types
