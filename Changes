@@ -6,6 +6,7 @@ Revision history for {{ $dist-name }}
       MooseX-Types-Path-Tiny as of version 0.002, and to using MooseX::Types
       -- the Type::Tiny version is available in the separate Types-Path-Tiny
       distribution.
+    - Perl prereq remains at v5.8.1
 
 0.004     2013-06-21 13:05:55 America/New_York
 
