@@ -47,6 +47,9 @@ for my $type ( AbsPath, AbsFile, AbsDir ) {
 ##}
 
 1;
+__END__
+
+=pod
 
 =for stopwords coercions
 
