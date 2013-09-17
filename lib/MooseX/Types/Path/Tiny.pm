@@ -1,9 +1,7 @@
 use strict;
 use warnings;
-
 package MooseX::Types::Path::Tiny;
 # ABSTRACT: Path::Tiny types and coercions for Moose
-# VERSION
 
 use Moose 2;
 use MooseX::Types::Stringlike qw/Stringable/;
@@ -49,8 +47,6 @@ for my $type ( AbsPath, AbsFile, AbsDir ) {
 ##}
 
 1;
-
-=for Pod::Coverage method_names_here
 
 =for stopwords coercions
 
