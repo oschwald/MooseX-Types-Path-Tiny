@@ -4,7 +4,7 @@ MooseX::Types::Path::Tiny - Path::Tiny types and coercions for Moose
 
 # VERSION
 
-version 0.006
+version 0.007
 
 # SYNOPSIS
 
@@ -34,7 +34,7 @@ version 0.006
 
 # DESCRIPTION
 
-This module provides [Path::Tiny](http://search.cpan.org/perldoc?Path::Tiny) types for Moose.  It handles
+This module provides [Path::Tiny](https://metacpan.org/pod/Path::Tiny) types for Moose.  It handles
 two important types of coercion:
 
 - coercing objects with overloaded stringification
@@ -44,11 +44,11 @@ It also can check to ensure that files or directories exist.
 
 # SUBTYPES
 
-This module uses [MooseX::Types](http://search.cpan.org/perldoc?MooseX::Types) to define the following subtypes.
+This module uses [MooseX::Types](https://metacpan.org/pod/MooseX::Types) to define the following subtypes.
 
 ## Path
 
-`Path` ensures an attribute is a [Path::Tiny](http://search.cpan.org/perldoc?Path::Tiny) object.  Strings and
+`Path` ensures an attribute is a [Path::Tiny](https://metacpan.org/pod/Path::Tiny) object.  Strings and
 objects with overloaded stringification may be coerced.
 
 ## AbsPath
@@ -69,7 +69,7 @@ the directory actually exists on the filesystem.
 
 ## Path vs File vs Dir
 
-`Path` just ensures you have a [Path::Tiny](http://search.cpan.org/perldoc?Path::Tiny) object.
+`Path` just ensures you have a [Path::Tiny](https://metacpan.org/pod/Path::Tiny) object.
 
 `File` and `Dir` check the filesystem.  Don't use them unless that's really
 what you want.
@@ -89,9 +89,9 @@ constructors, which hold the reference for you.
 
 # SEE ALSO
 
-- [Path::Tiny](http://search.cpan.org/perldoc?Path::Tiny)
-- [Moose::Manual::Types](http://search.cpan.org/perldoc?Moose::Manual::Types)
-- [Types::Path::Tiny](http://search.cpan.org/perldoc?Types::Path::Tiny)
+- [Path::Tiny](https://metacpan.org/pod/Path::Tiny)
+- [Moose::Manual::Types](https://metacpan.org/pod/Moose::Manual::Types)
+- [Types::Path::Tiny](https://metacpan.org/pod/Types::Path::Tiny)
 
 # AUTHOR
 
@@ -104,3 +104,8 @@ This software is Copyright (c) 2013 by David Golden.
 This is free software, licensed under:
 
     The Apache License, Version 2.0, January 2004
+
+# CONTRIBUTORS
+
+- Karen Etheridge <ether@cpan.org>
+- Toby Inkster <mail@tobyinkster.co.uk>
