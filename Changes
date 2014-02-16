@@ -1,6 +1,8 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+
+0.009     2014-02-16 21:57:00Z
     - only clean namespaces when MooseX::Types is new enough that our declared
       types are installed as methods
 
