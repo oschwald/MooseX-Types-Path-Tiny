@@ -5,10 +5,10 @@ Revision history for {{ $dist-name }}
 0.007     2013-12-22 00:44:49Z
     - add missing authority data to module and metadata
 
-0.006     2013-06-21 15:01:15 PDT-0700 (Karen Etheridge)
+0.006     2013-06-21 22:01:15Z
     - re-release with my plugin bundle, fixing associated metadata.
 
-0.005     2013-06-21 13:11:26 America/Vancouver
+0.005     2013-06-21 20:11:26Z
     - split apart MooseX::Types::Path::Tiny and Types::Path::Tiny into their
       own distributions. This dist has reverted back to
       MooseX-Types-Path-Tiny as of version 0.002, and to using MooseX::Types
