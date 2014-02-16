@@ -1,6 +1,8 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+
+0.008     2014-02-16 21:20:46Z
     - new Paths, AbsPaths types, for coercable ArrayRefs
 
 0.007     2013-12-22 00:44:49Z

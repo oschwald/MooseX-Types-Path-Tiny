@@ -4,7 +4,7 @@ MooseX::Types::Path::Tiny - Path::Tiny types and coercions for Moose
 
 # VERSION
 
-version 0.007
+version 0.008
 
 # SYNOPSIS
 
@@ -27,6 +27,12 @@ version 0.007
       coerce => 1,
     );
 
+    has filenames => (
+      is => 'ro',
+      isa => Paths,
+      coerce => 1,
+    );
+
     ### usage in code
 
     Foo->new( filename => 'foo.txt' ); # coerced to Path::Tiny
@@ -34,7 +40,7 @@ version 0.007
 
 # DESCRIPTION
 
-This module provides [Path::Tiny](https://metacpan.org/pod/Path::Tiny) types for Moose.  It handles
+This module provides [Path::Tiny](https://metacpan.org/pod/Path::Tiny) types for [Moose](https://metacpan.org/pod/Moose).  It handles
 two important types of coercion:
 
 - coercing objects with overloaded stringification
@@ -65,6 +71,11 @@ the file actually exists on the filesystem.
 These are just like `Path` and `AbsPath`, except they check `-d` to ensure
 the directory actually exists on the filesystem.
 
+## Paths, AbsPaths
+
+These are arrayrefs of `Path` and `AbsPath`, and include coercions from
+arrayrefs of strings.
+
 # CAVEATS
 
 ## Path vs File vs Dir
@@ -76,13 +87,13 @@ what you want.
 
 ## Usage with File::Temp
 
-Be careful if you pass in a File::Temp object. Because the argument is
-stringified during coercion into a Path::Tiny object, no reference to the
-original File::Temp argument is held.  Be sure to hold an external reference to
+Be careful if you pass in a [File::Temp](https://metacpan.org/pod/File::Temp) object. Because the argument is
+stringified during coercion into a [Path::Tiny](https://metacpan.org/pod/Path::Tiny) object, no reference to the
+original [File::Temp](https://metacpan.org/pod/File::Temp) argument is held.  Be sure to hold an external reference to
 it to avoid immediate cleanup of the temporary file or directory at the end of
 the enclosing scope.
 
-A better approach is to use Path::Tiny's own `tempfile` or `tempdir`
+A better approach is to use [Path::Tiny](https://metacpan.org/pod/Path::Tiny)'s own `tempfile` or `tempdir`
 constructors, which hold the reference for you.
 
     Foo->new( filename => Path::Tiny->tempfile );
