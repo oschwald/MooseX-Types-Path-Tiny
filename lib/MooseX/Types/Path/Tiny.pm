@@ -112,7 +112,7 @@ __END__
 
 =head1 DESCRIPTION
 
-This module provides L<Path::Tiny> types for Moose.  It handles
+This module provides L<Path::Tiny> types for L<Moose>.  It handles
 two important types of coercion:
 
 =for :list
@@ -164,13 +164,13 @@ what you want.
 
 =head2 Usage with File::Temp
 
-Be careful if you pass in a File::Temp object. Because the argument is
-stringified during coercion into a Path::Tiny object, no reference to the
-original File::Temp argument is held.  Be sure to hold an external reference to
+Be careful if you pass in a L<File::Temp> object. Because the argument is
+stringified during coercion into a L<Path::Tiny> object, no reference to the
+original L<File::Temp> argument is held.  Be sure to hold an external reference to
 it to avoid immediate cleanup of the temporary file or directory at the end of
 the enclosing scope.
 
-A better approach is to use Path::Tiny's own C<tempfile> or C<tempdir>
+A better approach is to use L<Path::Tiny>'s own C<tempfile> or C<tempdir>
 constructors, which hold the reference for you.
 
     Foo->new( filename => Path::Tiny->tempfile );
