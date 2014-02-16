@@ -1,6 +1,7 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+    - new Paths, AbsPaths types, for coercable ArrayRefs
 
 0.007     2013-12-22 00:44:49Z
     - add missing authority data to module and metadata

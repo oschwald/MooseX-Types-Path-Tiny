@@ -6,7 +6,12 @@ package MooseX::Types::Path::Tiny;
 use Moose 2;
 use MooseX::Types::Stringlike qw/Stringable/;
 use MooseX::Types::Moose qw/Str ArrayRef/;
-use MooseX::Types -declare => [qw( Path AbsPath File AbsFile Dir AbsDir )];
+use MooseX::Types -declare => [qw/
+    Path AbsPath
+    File AbsFile
+    Dir AbsDir
+    Paths AbsPaths
+/];
 use Path::Tiny ();
 use namespace::autoclean;
 
@@ -19,6 +24,9 @@ subtype Dir,     as Path, where { $_->is_dir },  message { "Directory '$_' does 
 
 subtype AbsFile, as AbsPath, where { $_->is_file }, message { "File '$_' does not exist" };
 subtype AbsDir,  as AbsPath, where { $_->is_dir },  message { "Directory '$_' does not exist" };
+
+subtype Paths,   as ArrayRef[Path];
+subtype AbsPaths, as ArrayRef[AbsPath];
 #>>>
 
 for my $type ( 'Path::Tiny', Path, File, Dir ) {
@@ -39,6 +47,22 @@ for my $type ( AbsPath, AbsFile, AbsDir ) {
         from ArrayRef()   => via { Path::Tiny::path(@$_)->absolute },
     );
 }
+
+coerce(
+    Paths,
+    from Path()       => via { [ $_ ] },
+    from Str()        => via { [ Path::Tiny::path($_) ] },
+    from Stringable() => via { [ Path::Tiny::path($_) ] },
+    from ArrayRef()   => via { [ map { Path::Tiny::path($_) } @$_ ] },
+);
+
+coerce(
+    AbsPaths,
+    from AbsPath()    => via { [ $_ ] },
+    from Str()        => via { [ Path::Tiny::path($_)->absolute ] },
+    from Stringable() => via { [ Path::Tiny::path($_)->absolute ] },
+    from ArrayRef()   => via { [ map { Path::Tiny::path($_)->absolute } @$_ ] },
+);
 
 ### optionally add Getopt option type (adapted from MooseX::Types:Path::Class
 ##eval { require MooseX::Getopt; };
@@ -72,6 +96,12 @@ __END__
   has directory => (
     is => 'ro',
     isa => AbsPath,
+    coerce => 1,
+  );
+
+  has filenames => (
+    is => 'ro',
+    isa => Paths,
     coerce => 1,
   );
 
@@ -117,6 +147,11 @@ the file actually exists on the filesystem.
 
 These are just like C<Path> and C<AbsPath>, except they check C<-d> to ensure
 the directory actually exists on the filesystem.
+
+=head2 Paths, AbsPaths
+
+These are arrayrefs of C<Path> and C<AbsPath>, and include coercions from
+arrayrefs of strings.
 
 =head1 CAVEATS
 
