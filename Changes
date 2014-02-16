@@ -1,6 +1,8 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+    - only clean namespaces when MooseX::Types is new enough that our declared
+      types are installed as methods
 
 0.008     2014-02-16 21:20:46Z
     - new Paths, AbsPaths types, for coercable ArrayRefs

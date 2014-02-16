@@ -13,7 +13,7 @@ use MooseX::Types -declare => [qw/
     Paths AbsPaths
 /];
 use Path::Tiny ();
-use namespace::autoclean;
+use if eval { MooseX::Types->VERSION(0.42) }, 'namespace::autoclean';
 
 #<<<
 subtype Path,    as 'Path::Tiny';
