@@ -8,6 +8,7 @@ use MooseX::Types::Stringlike qw/Stringable/;
 use MooseX::Types::Moose qw/Str ArrayRef/;
 use MooseX::Types -declare => [qw( Path AbsPath File AbsFile Dir AbsDir )];
 use Path::Tiny ();
+use namespace::autoclean;
 
 #<<<
 subtype Path,    as 'Path::Tiny';
