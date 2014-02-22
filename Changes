@@ -3,7 +3,7 @@ Revision history for {{ $dist-name }}
 {{$NEXT}}
 
 0.010     2014-02-16 22:02:29Z
-    - if eval problem in "use if" in 0.009
+    - fixed if eval problem in "use if" in 0.009
 
 0.009     2014-02-16 21:57:00Z
     - only clean namespaces when MooseX::Types is new enough that our declared
