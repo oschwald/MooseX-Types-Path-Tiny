@@ -85,7 +85,7 @@ __END__
   package Foo;
 
   use Moose;
-  use MooseX::Types::Path::Tiny qw/Path AbsPath/;
+  use MooseX::Types::Path::Tiny qw/Path Paths AbsPath/;
 
   has filename => (
     is => 'ro',
@@ -109,6 +109,7 @@ __END__
 
   Foo->new( filename => 'foo.txt' ); # coerced to Path::Tiny
   Foo->new( directory => '.' ); # coerced to path('.')->absolute
+  Foo->new( filenames => [qw/bar.txt baz.txt/] ); # coerced to ArrayRef[Path::Tiny] 
 
 =head1 DESCRIPTION
 
