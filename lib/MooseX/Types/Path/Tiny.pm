@@ -109,7 +109,7 @@ __END__
 
   Foo->new( filename => 'foo.txt' ); # coerced to Path::Tiny
   Foo->new( directory => '.' ); # coerced to path('.')->absolute
-  Foo->new( filenames => [qw/bar.txt baz.txt/] ); # coerced to ArrayRef[Path::Tiny] 
+  Foo->new( filenames => [qw/bar.txt baz.txt/] ); # coerced to ArrayRef[Path::Tiny]
 
 =head1 DESCRIPTION
 
