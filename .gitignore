@@ -1,3 +1,6 @@
-/MooseX-Types-Path-Tiny*
-/.build
-/.tidyall.d
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/MooseX-Types-Path-Tiny-*/
+/MooseX-Types-Path-Tiny-*.tar.gz
