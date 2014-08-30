@@ -2,6 +2,7 @@ use strict;
 use warnings;
 package MooseX::Types::Path::Tiny;
 # ABSTRACT: Path::Tiny types and coercions for Moose
+# KEYWORDS: moose type constraint path filename directory
 
 use Moose 2;
 use MooseX::Types::Stringlike qw/Stringable/;
