@@ -1,6 +1,7 @@
 Revision history for {{ $dist-name }}
 
 {{$NEXT}}
+    - documentation amendments (thanks, Demian Riccardi!)
 
 0.010     2014-02-16 22:02:29Z
     - fixed if eval problem in "use if" in 0.009
