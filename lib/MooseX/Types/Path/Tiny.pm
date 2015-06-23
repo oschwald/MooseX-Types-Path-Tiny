@@ -4,6 +4,8 @@ package MooseX::Types::Path::Tiny;
 # ABSTRACT: Path::Tiny types and coercions for Moose
 # KEYWORDS: moose type constraint path filename directory
 
+our $VERSION = '0.012';
+
 use Moose 2;
 use MooseX::Types::Stringlike qw/Stringable/;
 use MooseX::Types::Moose qw/Str ArrayRef/;
