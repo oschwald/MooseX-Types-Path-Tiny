@@ -3,6 +3,7 @@ use warnings;
 package MooseX::Types::Path::Tiny;
 # ABSTRACT: Path::Tiny types and coercions for Moose
 # KEYWORDS: moose type constraint path filename directory
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.012';
 
@@ -187,5 +188,3 @@ constructors, which hold the reference for you.
 * L<Types::Path::Tiny>
 
 =cut
-
-# vim: ts=4 sts=4 sw=4 et:
