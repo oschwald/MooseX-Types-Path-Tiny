@@ -2,6 +2,7 @@ Revision history for MooseX-Types-Path-Tiny
 
 {{$NEXT}}
     - repository migrated to the github moose organization
+    - add MooseX::Getopt option type maps when MooseX::Getopt is installed
 
 0.011     2014-08-30 03:17:07Z
     - documentation amendments (thanks, Demian Riccardi!)
@@ -44,4 +45,3 @@ Revision history for MooseX-Types-Path-Tiny
 
 0.001     2013-01-31 15:45:24Z
     - First release
-

@@ -68,12 +68,24 @@ coerce(
     from ArrayRef()   => via { [ map { Path::Tiny::path($_)->absolute } @$_ ] },
 );
 
-### optionally add Getopt option type (adapted from MooseX::Types:Path::Class
-##eval { require MooseX::Getopt; };
-##if ( !$@ ) {
-##    MooseX::Getopt::OptionTypeMap->add_option_type_to_map( $_, '=s', )
-##      for ( 'Path::Tiny', Path );
-##}
+
+# optionally add Getopt option type (adapted from MooseX::Types:Path::Class)
+eval { require MooseX::Getopt; };
+if ( !$@ ) {
+    for my $type (
+        'Path::Tiny',
+        Path ,
+        AbsPath,
+        File ,
+        AbsFile,
+        Dir ,
+        AbsDir,
+        Paths ,
+        AbsPaths,
+    ) {
+        MooseX::Getopt::OptionTypeMap->add_option_type_to_map( $type, '=s', );
+    }
+}
 
 1;
 __END__
